@@ -167,12 +167,10 @@ public class Main {
 	 * Ordena las frases de menor número de letras a mayor y retorna el ArrayList.
 	 */
 	private static ArrayList<String> ordenaFrases(ArrayList<String> frases) {
-		String fraseAux = "";
-		
 		for (int i1 = 0; i1 < frases.size(); i1++) {
 			for (int i2 = i1+1; i2 < frases.size(); i2++) {
 				if (cuentaLetras(frases.get(i1)) > cuentaLetras(frases.get(i2))) {
-					fraseAux = frases.get(i1);
+					String fraseAux = frases.get(i1);
 					frases.set(i1, frases.get(i2));
 					frases.set(i2, fraseAux);
 				}
